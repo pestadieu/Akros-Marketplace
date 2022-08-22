@@ -11,13 +11,16 @@ WORKDIR /usr/local/app/am-ui
 # copy only package, package-lock files and api-yaml and install dependencies for caching purposes
 COPY ./am-ui/package.json ./
 COPY ./am-ui/pnpm-lock.yaml ./
-COPY ./am-ui/pnpm-workspace.yaml ./
+COPY ./am-ui/.npmrc ./
 COPY ./am-ui/build_scripts ./build_scripts/
 COPY ./am-ui/webcomponents/build_scripts ./webcomponents/build_scripts/
 COPY ./am-ui/webcomponents/package.json ./webcomponents/
 COPY ./am-ui/webcomponents/create-ad-webcomponent/package.json ./webcomponents/create-ad-webcomponent/
 COPY ./am-ui/webcomponents/search-results-webcomponent/package.json ./webcomponents/search-results-webcomponent/
 COPY ./am-ui/webcomponents/search-webcomponent/package.json ./webcomponents/search-webcomponent/
+COPY ./am-ui/webcomponents/create-ad-webcomponent/pnpm-lock.yaml ./webcomponents/create-ad-webcomponent/
+COPY ./am-ui/webcomponents/search-results-webcomponent/pnpm-lock.yaml ./webcomponents/search-results-webcomponent/
+COPY ./am-ui/webcomponents/search-webcomponent/pnpm-lock.yaml ./webcomponents/search-webcomponent/
 
 # Add the source code to app
 COPY ./api.yaml /usr/local/app/
