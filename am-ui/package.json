@@ -25,7 +25,7 @@
     "clean": "gts clean",
     "e2e": "ng e2e",
     "e2e:headless": "ng run marketplace-ui:cypress-run",
-    "cypress:open": "cypress open",
+    "cypress:open": "cypress open --config-file=cypress.config.ts",
     "cypress:run": "cypress run",
     "preinstall": "node build_scripts/install-webcomponents.js",
     "openapi-gen": "ng-openapi-gen --input ../../../api.yaml --output src/app/api"
