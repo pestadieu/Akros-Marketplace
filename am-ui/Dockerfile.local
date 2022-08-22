@@ -3,7 +3,7 @@
 # Use official node image as the base image
 FROM node:lts as build
 RUN apt-get update && apt-get install -y openjdk-11-jdk
-RUN npm install -g pnpm
+RUN npm install pnpm
 
 # Set the working directory
 WORKDIR /usr/local/app/am-ui
